@@ -1,5 +1,3 @@
-#![allow(unused_variables, dead_code)]
-
 /*
  * The Luhn algorithm is used to validate credit card numbers. The algorithm takes
  * a string as input and does the following to validate the credit card number:
@@ -32,7 +30,6 @@ fn sum_of_digits(num: u32) -> u32 {
 pub fn luhn(cc_number: &str) -> bool {
     let clean_cc_number = remove_whitespace(cc_number);
     let mut digit_sum = 0;
-    let mut digits = 0;
 
     if clean_cc_number.len() < 2 {
         return false
@@ -47,7 +44,6 @@ pub fn luhn(cc_number: &str) -> bool {
                 } else {
                     digit_sum += digit;
                 }
-                digits += 1;
             }
             None => return false
         }
