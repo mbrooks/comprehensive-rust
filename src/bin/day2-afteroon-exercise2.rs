@@ -35,12 +35,12 @@ fn test_matches_without_wildcard_with_additional_paths_and_match() {
 }
 
 #[test]
-fn test_matches_without_wildcard_with_only_first_path_matches_and_match() {
+fn test_matches_without_wildcard_with_only_first_path_matches_and_not_a_match() {
     assert!(!prefix_matches("/v1/publishers", "/v1"));
 }
 
 #[test]
-fn test_matches_without_wildcard_with_additional_string_in_path_and_match() {
+fn test_matches_without_wildcard_with_additional_string_in_path_and_not_a_match() {
     assert!(!prefix_matches("/v1/publishers", "/v1/publishersBooks"));
 }
 
