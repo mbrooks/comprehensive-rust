@@ -1,6 +1,3 @@
-// TODO: remove this when you're done with your implementation.
-#![allow(unused_imports, unused_variables, dead_code)]
-
 mod ffi {
     use std::os::raw::{c_char, c_int, c_long, c_ulong, c_ushort};
 
