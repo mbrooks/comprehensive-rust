@@ -1,6 +1,3 @@
-// TODO: remove this when you're done with your implementation.
-#![allow(unused_variables, dead_code)]
-
 struct User {
     name: String,
     age: u32,
@@ -54,4 +51,12 @@ fn test_set_age() {
     assert_eq!(bob.age(), 32);
     bob.set_age(33);
     assert_eq!(bob.age(), 33);
+}
+
+#[test]
+fn test_set_weight() {
+    let mut bob = User::new(String::from("Bob"), 32, 155.2);
+    assert_eq!(bob.weight(), 155.2);
+    bob.set_weight(170.1);
+    assert_eq!(bob.weight(), 170.1);
 }
